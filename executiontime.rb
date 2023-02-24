@@ -50,21 +50,23 @@
 # end
 
 def sub_sum(arr)
-    # sum = []
-    hash = {}
+    arr_sums = []
+    # hash = {}
 
-    (0..arr.length-1).each do | i|
+    (0...arr.length-1).each do | i|
         first_ele = arr[i]
         second_ele = arr[i+1]
+
         sum_arr = [first_ele,second_ele]
         sum = first_ele + second_ele
+        arr_sums << sum
 
-        hash[sum] = sum_arr
+        # hash[sum] = sum_arr
 
     end
-    hash.sort_by {|k,v| k}
-    hash[-1]
+    
+    arr_sums.max
 end
 
-list = [5, 3, -7]
-p sub_sum(list)
+# list = [5, 3, -7]
+# p sub_sum(list)
