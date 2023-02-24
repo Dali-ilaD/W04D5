@@ -46,7 +46,7 @@
 #         end
 #     end
     
-#     max_sum && max_arr
+#     max_sum
 # end
 
 def sub_sum(arr)
